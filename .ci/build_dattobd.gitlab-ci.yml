@@ -28,8 +28,8 @@ build:dattobd:on:debian11:
     - sshpass -p "$VM_PASSWORD" ssh -o StrictHostKeyChecking=no datto@$DEBIAN11_VM_IP '
         sudo rm -rf dattobd;
         git clone https://github.com/krzysztof-wasieczko/dattobd.git --recursive;
-        cd dattobd'
-        git switch cicd_obs;
+        cd dattobd;
+        git switch cicd_obs'
 #        sudo make'
 
 build:dattobd:on:ubuntu1804:
