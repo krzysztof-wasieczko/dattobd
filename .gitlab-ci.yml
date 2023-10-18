@@ -1,7 +1,9 @@
 stages:
   - create vm
   - build dattobd
+  - obs
 
 include:
   - local: .ci/create_vm.gitlab-ci.yml
   - local: .ci/build_dattobd.gitlab-ci.yml
+  - local: .ci/obs.gitlab-ci.yml

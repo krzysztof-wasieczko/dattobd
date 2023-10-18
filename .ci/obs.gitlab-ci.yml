@@ -1,0 +1,11 @@
+variables:
+  OBS_PROJECT: "home:krzysztof.wasieczko"
+  OBS_PACKAGE: "dattobd"
+  OBS_TARGET_DISTRO: "null"
+
+obsrelease:
+  stage: obs
+  tags:
+    - docker-throttled
+  script:
+    - echo "TEST HAS STARTED"
