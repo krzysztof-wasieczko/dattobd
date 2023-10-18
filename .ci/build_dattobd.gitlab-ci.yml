@@ -8,8 +8,9 @@ build:dattobd:on:rhel9:
     - apt-get install sshpass -y
     - sshpass -p "$VM_PASSWORD" ssh -o StrictHostKeyChecking=no datto@$RHEL9_VM_IP '
         sudo rm -rf dattobd;
-        git clone https://github.com/datto/dattobd.git --recursive;
+        git clone https://github.com/krzysztof-wasieczko/dattobd.git --recursive;
         cd dattobd;
+        git switch cicd_obs;
         sudo yum install kernel-devel-$(uname -r) -y;
         sudo yum groupinstall "Development Tools" -y;
         sudo make'
@@ -26,8 +27,9 @@ build:dattobd:on:debian11:
     - apt-get install sshpass -y
     - sshpass -p "$VM_PASSWORD" ssh -o StrictHostKeyChecking=no datto@$DEBIAN11_VM_IP '
         sudo rm -rf dattobd;
-        git clone https://github.com/datto/dattobd.git --recursive;
+        git clone https://github.com/krzysztof-wasieczko/dattobd.git --recursive;
         cd dattobd'
+        git switch cicd_obs;
 #        sudo make'
 
 build:dattobd:on:ubuntu1804:
@@ -40,8 +42,9 @@ build:dattobd:on:ubuntu1804:
     - apt-get install sshpass -y
     - sshpass -p "$VM_PASSWORD" ssh -o StrictHostKeyChecking=no datto@$UBUNTU1804_VM_IP '
         sudo rm -rf dattobd;
-        git clone https://github.com/datto/dattobd.git --recursive;
+        git clone https://github.com/krzysztof-wasieczko/dattobd.git --recursive;
         cd dattobd;
+        git switch cicd_obs;
         sudo make'
 
 build:dattobd:on:ubuntu2004:
@@ -54,8 +57,9 @@ build:dattobd:on:ubuntu2004:
     - apt-get install sshpass -y
     - sshpass -p "$VM_PASSWORD" ssh -o StrictHostKeyChecking=no datto@$UBUNTU2004_VM_IP '
         sudo rm -rf dattobd;
-        git clone https://github.com/datto/dattobd.git --recursive;
+        git clone https://github.com/krzysztof-wasieczko/dattobd.git --recursive;
         cd dattobd;
+        git switch cicd_obs;
         sudo make'
 
 build:dattobd:on:ubuntu2204:
@@ -68,8 +72,9 @@ build:dattobd:on:ubuntu2204:
     - apt-get install sshpass -y
     - sshpass -p "$VM_PASSWORD" ssh -o StrictHostKeyChecking=no datto@$UBUNTU2204_VM_IP '
         sudo rm -rf dattobd;
-        git clone https://github.com/datto/dattobd.git --recursive;
+        git clone https://github.com/krzysztof-wasieczko/dattobd.git --recursive;
         cd dattobd;
+        git switch cicd_obs;
         sudo make'
 
 build:dattobd:on:centos8:
@@ -82,8 +87,9 @@ build:dattobd:on:centos8:
     - apt-get install sshpass -y
     - sshpass -p "$VM_PASSWORD" ssh -o StrictHostKeyChecking=no datto@$CENTOS8_VM_IP '
         sudo rm -rf dattobd;
-        git clone https://github.com/datto/dattobd.git --recursive;
+        git clone https://github.com/krzysztof-wasieczko/dattobd.git --recursive;
         cd dattobd;
+        git switch cicd_obs;
         sudo yum install kernel-devel-$(uname -r) -y;
         sudo yum groupinstall "Development Tools" -y;
         sudo make'
