@@ -27,6 +27,7 @@ obsscratch_18_04:
 
 obsrelease:
   stage: obs
+  needs: ["obsscratch_18_04"]
   tags:
     - docker
   script:
