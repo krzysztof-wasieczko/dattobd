@@ -1,3 +1,5 @@
+image: registry.openshift.datto.net/devops/centos-obs-scratch:latest
+
 variables:
   OBS_PROJECT: "home:krzysztof.wasieczko"
   OBS_PACKAGE: "dattobd"
