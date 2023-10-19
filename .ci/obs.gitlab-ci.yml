@@ -4,7 +4,7 @@ variables:
   OBS_TARGET_DISTRO: "null"
 
 before_script:
-  - cd ../..; tar -c -z --exclude-vcs -v -f ${CI_PROJECT_NAME}.tar.gz ${CI_PROJECT_NAME}; cd $CI_PROJECT_NAME
+  - cd ..; tar -c -z --exclude-vcs -v -f ${CI_PROJECT_NAME}.tar.gz ${CI_PROJECT_NAME}; cd $CI_PROJECT_NAME
   - export PARENT_VERSION=$(rpmspec -q --srpm --qf '%{version}' dist/${CI_PROJECT_NAME}.spec)
 
 obsrelease:
